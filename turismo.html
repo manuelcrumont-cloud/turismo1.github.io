@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turismo web Perú</title>
+  <link rel="stylesheet" href="./CSS/turismo.css" />
+</head>
+
+<body>
+  <!-- ======= ENCABEZADO Y MENÚ DE NAVEGACIÓN ======= -->
+  <header>
+    <h1>Turismo web Perú</h1>
+    <nav>
+      <img src="./IMAGENES/logotipofinal1.png" alt="Logo" />
+      <ul class="menu">
+        <li><a href="#" data-seccion="inicio">Inicio</a></li>
+        <li><a href="#" data-seccion="destinos">Destinos</a></li>
+        <li><a href="#" data-seccion="experiencias">Experiencias</a></li>
+        <li><a href="#" data-seccion="galeria">Videos</a></li>
+        <li><a href="#" data-seccion="galeria-fotos">Galería</a></li>
+        <li><a href="#" data-seccion="contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ======= SECCIONES DINÁMICAS SPA (Single Page Application o Aplicación de Página Única) ======= -->
+  
+  <!-- Sección INICIO (visible por defecto) -->
+  <section id="inicio" class="bloque seccion activa">
+    <h2>Bienvenidos a Perú</h2>
+    <p>Descubre los paisajes, la cultura y la historia del Perú.</p>
+    <video controls width="100%">
+      <source src="./video/vid011.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- Sección DESTINOS -->
+  <section id="destinos" class="bloque seccion">
+  <h2>Destinos Populares</h2>
+
+  <div class="carrusel">
+    <button id="anterior" class="carrusel-btn">←</button>
+
+    <div class="carrusel-slide">
+      <div class="destino activo">
+        <img src="./IMAGENES/img1.png" alt="Machu Picchu" />
+        <h3>Machu Picchu</h3>
+      </div>
+      <div class="destino">
+        <img src="./IMAGENES/Imagen2.png" alt="Cusco" />
+        <h3>Cusco</h3>
+      </div>
+      <div class="destino">
+        <img src="./IMAGENES/Imagen3.png" alt="Arequipa" />
+        <h3>Arequipa</h3>
+      </div>
+    </div>
+
+    <button id="siguiente" class="carrusel-btn">→</button>
+  </div>
+</section>
+
+
+  <!-- Sección EXPERIENCIAS -->
+  <section id="experiencias" class="bloque seccion">
+    <h2>Experiencias</h2>
+    <ul>
+      <li>La cultura milenaria del Perú es una de las más ricas y antiguas del mundo...</li>
+      <li>Los Andes peruanos son el escenario perfecto para los amantes de la aventura...</li>
+      <li>La cocina peruana es una de las más ricas y diversas del mundo...</li>
+    </ul>
+    <audio controls>
+      <source src="./audio/miperu.mp3" type="audio/mp3" />
+    </audio>
+  </section>
+
+  <!-- Sección VIDEOS -->
+  <section id="galeria" class="bloque seccion">
+    <h2>Galería Virtual</h2>
+    <a href="https://www.youtube.com/watch?v=Zps_vAzppiM" target="_blank">Conoce más de Perú con este video</a>
+  </section>
+
+  <!-- Sección GALERÍA DE FOTOS -->
+  <section id="galeria-fotos" class="bloque seccion">
+    <h2>Galería de Fotos</h2>
+    <div class="galeria">
+      <div class="foto">
+        <img src="./IMAGENES/museo1.jpg" alt="Museo 1">
+        <img src="./IMAGENES/museo2.jpg" alt="Museo 2">
+        <p>MUSEOS</p>
+      </div>
+      <div class="foto">
+        <img src="./IMAGENES/res1.png" alt="Restaurante 1">
+        <img src="./IMAGENES/res2.png" alt="Restaurante 2">
+        <p>RESTAURANTES</p>
+      </div>
+      <div class="foto">
+        <img src="./IMAGENES/hot1.png" alt="Hotel 1">
+        <img src="./IMAGENES/hot2.png" alt="Hotel 2">
+        <p>HOTELES</p>
+      </div>
+      <div class="foto">
+        <img src="./IMAGENES/depo1.png" alt="Deporte 1">
+        <img src="./IMAGENES/depo2.png" alt="Deporte 2">
+        <p>DEPORTES EXTREMOS</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección CONTACTO -->
+  <section id="contacto" class="bloque seccion">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Correo" required />
+      <textarea placeholder="Mensaje..."></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Sección UBICACIÓN (opcional, no está en el menú pero se muestra si se activa por código) -->
+  <section id="ubicacion" class="bloque seccion">
+    <h2>Ubicación</h2>
+    <p>Estamos ubicados en Edificio Torre Parquemar, Avenida Larco 1301, Piso 4, Miraflores 15074, Lima.</p>
+    <div style="position: relative; width: 100%; height: 300px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      <a href="#" id="como-llegar-btn" style="position: absolute; bottom: 16px; right: 16px; background: #319795; color: #fff; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 8px #0002;">¿Cómo llegar aquí?</a>
+    </div>
+  </section>
+
+  <!-- ======= PIE DE PÁGINA ======= -->
+  <footer>
+    <div class="footer-container">
+      <!-- Puedes incluir redes, info adicional, etc. -->
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2025 Viajes por Perú. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/51986532493" target="_blank" id="whatsapp-float" title="Contáctanos por WhatsApp">
+    <img src="./iconos/icons8-whatsapp.svg" alt="WhatsApp" style="width:55px; height:55px;">
+  </a>
+
+  <!-- Botón flotante de instagram -->
+  <a href="https://www.instagram.com/" target="_blank" id="instagram-float" title="Contáctanos por Instagram">
+    <img src="./iconos/Instagram_icon-icons.com_66804.svg" alt="instagram" style="width:55px; height:55px;">
+  </a>
+
+  
+
+  <!-- JavaScript que hará funcionar la navegación SPA -->
+  <script src="./JS/turismo.js"></script>
+</body>
+</html>
